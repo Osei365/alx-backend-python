@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-'''Task 102.'''
+'''Task 12.
+'''
 from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    '''calculates a zoomed in array.'''
+    '''zooms a tuple in.
+    '''
     zoomed_in: List = [
         item for item in lst
         for i in range(int(factor))
@@ -16,4 +18,4 @@ array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(array, 3)
