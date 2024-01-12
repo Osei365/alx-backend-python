@@ -7,7 +7,7 @@ def zoom_array(lst: Tuple, factor: int = 2) -> List:
     '''calculates a zoomed in array.'''
     zoomed_in: Tuple = [
         item for item in lst
-        for i in range(factor)
+        for i in range(int(factor))
     ]
     return zoomed_in
 
