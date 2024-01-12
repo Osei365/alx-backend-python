@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''Task 102.'''
-from typing import Tuple, List
+from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
