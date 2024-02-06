@@ -3,9 +3,10 @@
 
 
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 import client
 from parameterized import parameterized
+from typing import Dict
 
 
 class TestGithubOrgClient(unittest.TestCase):
@@ -16,7 +17,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ('abc')
     ])
     @patch('client.get_json')
-    def test_org(self, org, mock):
+    def test_org(self, org: str, mock: Mock) -> None:
         """testing the org method."""
         instance = client.GithubOrgClient(org)
         instance.org()
