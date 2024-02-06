@@ -105,7 +105,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
             GithubOrgClient("google").public_repos(license="apache-2.0"),
             self.apache2_repos,
         )
-        
+
     @classmethod
     def tearDownClass(cls):
         """A class method called after tests in an individual class have run"""
