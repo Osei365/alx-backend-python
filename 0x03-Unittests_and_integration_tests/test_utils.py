@@ -50,12 +50,15 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """test the memoize method."""
         class TestClass:
+            """test class. """
 
             def a_method(self):
+                """ a method"""
                 return 42
 
             @utils.memoize
             def a_property(self):
+                """ a property."""
                 return self.a_method()
 
         with patch.object(TestClass, 'a_method') as mockClass:
