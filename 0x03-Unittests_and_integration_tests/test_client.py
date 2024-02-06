@@ -45,7 +45,7 @@ class TestGithubOrgClient(unittest.TestCase):
                    new_callable=PropertyMock) as mock:
             mock.return_value = 'world'
             instance = GithubOrgClient('testing')
-            result = instance.public_repos
+            result = instance.public_repos()
             check = [item['name'] for item in payload]
             self.assertEqual(result, check)
             mock.assert_called_once()
